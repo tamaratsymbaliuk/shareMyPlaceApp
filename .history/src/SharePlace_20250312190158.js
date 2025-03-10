@@ -1,6 +1,6 @@
 import { Modal } from './UI/Modal';
 import { Map } from './UI/Map';
-import { getCoordsFromAddress } from './Utility/Location';
+import {} from './Utility/'
 
 
 class PlaceFinder {
@@ -43,7 +43,7 @@ class PlaceFinder {
         });
     }
 
-    async findAddressHandler(event) {
+    findAddressHandler(event) {
         event.preventDefault();
         const address = event.target.querySelector('input').value;
         if (!address || address.trim().length === 0) {
@@ -52,13 +52,7 @@ class PlaceFinder {
         }
         const modal = new Modal('loading-modal-content', 'Loading location - please wait!');
         modal.show();
-        try {
-        const coordinates = await getCoordsFromAddress(address);
-        this.selectPlace(coordinates);
-        } catch (err) {
-            alert(err.message);
-        }    
-        modal.hide();
+        
     }
 }
 

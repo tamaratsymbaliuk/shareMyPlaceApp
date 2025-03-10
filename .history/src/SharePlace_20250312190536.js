@@ -58,7 +58,6 @@ class PlaceFinder {
         } catch (err) {
             alert(err.message);
         }    
-        modal.hide();
     }
 }
 

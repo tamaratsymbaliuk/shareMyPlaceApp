@@ -53,12 +53,15 @@ class PlaceFinder {
         const modal = new Modal('loading-modal-content', 'Loading location - please wait!');
         modal.show();
         try {
-        const coordinates = await getCoordsFromAddress(address);
+             const coordinates = await getCoordsFromAddress(address);
         this.selectPlace(coordinates);
         } catch (err) {
-            alert(err.message);
-        }    
-        modal.hide();
+            alert(err.)
+
+        }
+       
+
+        
     }
 }
 
