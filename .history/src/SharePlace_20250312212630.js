@@ -36,7 +36,7 @@ class PlaceFinder {
 
         const modal = new Modal('loading-modal-content', 'Loading location - please wait!');
         modal.show();
-        navigator.geolocation.getCurrentPosition(async successResult => {
+        navigator.geolocation.getCurrentPosition(successResult => {
             const coordinates = {
               lat: successResult.coords.latitude + Math.random() * 50,
               lng: successResult.coords.longitude + Math.random() * 50,

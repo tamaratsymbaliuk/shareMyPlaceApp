@@ -15,6 +15,8 @@ export async function getAddressFromCoords(coords) {
       const address = data.results[0].formatted_address;
       return address;
 
+
+
 }
 
 export async function getCoordsFromAddress(address) {

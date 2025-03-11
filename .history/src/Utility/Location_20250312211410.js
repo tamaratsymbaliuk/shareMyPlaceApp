@@ -5,15 +5,14 @@ export async function getAddressFromCoords(coords) {
       `https://maps.googleapis.com/maps/api/geocode/json?latlng=${coords.lat},${coords.lng}&key=${GOOGLE_API_KEY}`);
 
       if (!response.ok) {
-        throw new Error("Failed to fetch address");
+        throw new Error("Failed to fetch the address");
       }
       const data = await response.json();
       if (data.error_message) {
         throw new Error(data.error_message);
       }
 
-      const address = data.results[0].formatted_address;
-      return address;
+
 
 }
 

@@ -10,7 +10,7 @@ class PlaceFinder {
         this.shareBtn = document.getElementById('share-btn');
 
         locateUserBtn.addEventListener('click', this.locateUserHandler.bind(this));
-        this.shareBtn.addEventListener('click',);
+        this.shareBtn.addEventListener('click')
         addressForm.addEventListener('submit', this.findAddressHandler.bind(this));
     }
 
@@ -19,16 +19,12 @@ class PlaceFinder {
             this.map.render(coordinates);
         } else {
             this.map = new Map(coordinates);
-        }
-        
-        this.shareBtn.disabled = false;
-        const sharedLinkInputElement = document.getElementById('share-link');
-        sharedLinkInputElement.value = `${location.origin}/my-place?address=${encodeURI(address)}&lat=${coordinates.lat}&lng=${coordinates.lng}`;
+        }  
         
         
     }
 
-     locateUserHandler() {
+    async locateUserHandler() {
         if (!navigator.geolocation) {
             alert('Location feature is not available in your browser');
             return;
@@ -36,7 +32,7 @@ class PlaceFinder {
 
         const modal = new Modal('loading-modal-content', 'Loading location - please wait!');
         modal.show();
-        navigator.geolocation.getCurrentPosition(async successResult => {
+        navigator.geolocation.getCurrentPosition(successResult => {
             const coordinates = {
               lat: successResult.coords.latitude + Math.random() * 50,
               lng: successResult.coords.longitude + Math.random() * 50,

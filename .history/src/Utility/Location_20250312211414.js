@@ -12,8 +12,7 @@ export async function getAddressFromCoords(coords) {
         throw new Error(data.error_message);
       }
 
-      const address = data.results[0].formatted_address;
-      return address;
+
 
 }
 
