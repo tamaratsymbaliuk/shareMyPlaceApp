@@ -15,21 +15,7 @@ class PlaceFinder {
   }
 
   sharePlaceHandler() {
-      const sharedLinkInputElement = document.getElementById("share-link");
-      if (!navigator.clipboard) {
-          sharedLinkInputElement.select();
-          return;
-      }
-
-      navigator.clipboard.writeText(sharedLinkInputElement.value)
-      .then(() => {
-          alert('Copied into clipboard!');
-      })
-      .catch(err => {
-          console.log(err);
-          sharedLinkInputElement.select();
-      });
-
+      
   }
 
   selectPlace(coordinates, address) {

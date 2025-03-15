@@ -16,4 +16,4 @@ const coords = {
 };
 
 const address = queryParams.get('address');
-new LoadedPlace(coords, address);
+new LoadedPlace();

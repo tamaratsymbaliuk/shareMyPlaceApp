@@ -14,23 +14,7 @@ class PlaceFinder {
     addressForm.addEventListener("submit", this.findAddressHandler.bind(this));
   }
 
-  sharePlaceHandler() {
-      const sharedLinkInputElement = document.getElementById("share-link");
-      if (!navigator.clipboard) {
-          sharedLinkInputElement.select();
-          return;
-      }
-
-      navigator.clipboard.writeText(sharedLinkInputElement.value)
-      .then(() => {
-          alert('Copied into clipboard!');
-      })
-      .catch(err => {
-          console.log(err);
-          sharedLinkInputElement.select();
-      });
-
-  }
+  sharePlaceHandler;
 
   selectPlace(coordinates, address) {
     if (this.map) {

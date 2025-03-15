@@ -14,6 +14,4 @@ const coords = {
   lat: +queryParams.get("lat"), // or parseFloat(queryParams.get('lat'))
   lng: +queryParams.get("lng"),
 };
-
-const address = queryParams.get('address');
-new LoadedPlace(coords, address);
+new LoadedPlace();

@@ -25,10 +25,7 @@ class PlaceFinder {
       .then(() => {
           alert('Copied into clipboard!');
       })
-      .catch(err => {
-          console.log(err);
-          sharedLinkInputElement.select();
-      });
+      .catch();
 
   }
 

@@ -27,7 +27,6 @@ class PlaceFinder {
       })
       .catch(err => {
           console.log(err);
-          sharedLinkInputElement.select();
       });
 
   }

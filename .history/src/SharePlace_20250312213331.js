@@ -21,14 +21,7 @@ class PlaceFinder {
           return;
       }
 
-      navigator.clipboard.writeText(sharedLinkInputElement.value)
-      .then(() => {
-          alert('Copied into clipboard!');
-      })
-      .catch(err => {
-          console.log(err);
-          sharedLinkInputElement.select();
-      });
+      navigator.
 
   }
 
