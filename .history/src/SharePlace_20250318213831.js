@@ -49,12 +49,8 @@ class PlaceFinder {
       headers: {
         'Content-Type': 'application/json'
       }
-    })
-    .then(response => {
+    }).then(response => {
       return response.json();
-    })
-    .then(data => {
-      console.log(data);
     });
 
     this.shareBtn.disabled = false;

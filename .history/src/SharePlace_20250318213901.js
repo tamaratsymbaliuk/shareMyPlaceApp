@@ -54,8 +54,8 @@ class PlaceFinder {
       return response.json();
     })
     .then(data => {
-      console.log(data);
-    });
+      
+    })
 
     this.shareBtn.disabled = false;
     const sharedLinkInputElement = document.getElementById("share-link");

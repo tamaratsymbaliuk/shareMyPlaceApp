@@ -42,20 +42,9 @@ class PlaceFinder {
     fetch('http://localhost:3000/add-location', {
       method: 'POST',
       body: JSON.stringify({
-        address: address,
-        lat: coordinates.lat,
-        lng: coordinates.lng
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+        address: address
+      })
     })
-    .then(response => {
-      return response.json();
-    })
-    .then(data => {
-      console.log(data);
-    });
 
     this.shareBtn.disabled = false;
     const sharedLinkInputElement = document.getElementById("share-link");

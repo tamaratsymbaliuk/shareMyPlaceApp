@@ -47,15 +47,9 @@ class PlaceFinder {
         lng: coordinates.lng
       }),
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Tupe'
       }
     })
-    .then(response => {
-      return response.json();
-    })
-    .then(data => {
-      console.log(data);
-    });
 
     this.shareBtn.disabled = false;
     const sharedLinkInputElement = document.getElementById("share-link");
