@@ -15,6 +15,5 @@ const coords = {
   lng: +queryParams.get("lng"),
 };
 
-
 const address = queryParams.get('address');
 new LoadedPlace(coords, address);
