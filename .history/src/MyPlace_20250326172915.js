@@ -28,6 +28,6 @@ fetch('http://localhost:3000/location/' + locId)
   new LoadedPlace(data.coordinates, data.address);
 })
 .catch(err => {
-  alert(err.message);
-});
+  alert(err.mes)
+})
 

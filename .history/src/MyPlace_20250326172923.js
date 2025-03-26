@@ -29,5 +29,5 @@ fetch('http://localhost:3000/location/' + locId)
 })
 .catch(err => {
   alert(err.message);
-});
+})
 

@@ -27,7 +27,4 @@ fetch('http://localhost:3000/location/' + locId)
 .then(data => {
   new LoadedPlace(data.coordinates, data.address);
 })
-.catch(err => {
-  alert(err.message);
-});
 

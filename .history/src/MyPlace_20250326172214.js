@@ -19,15 +19,10 @@ const queryParams = url.searchParams;
 const locId = queryParams.get('location');
 fetch('http://localhost:3000/location/' + locId)
 .then(response => {
-  if (response.status === 404) {
-    throw new Error('Could not find location!');
-  }
   return response.json();
 })
 .then(data => {
-  new LoadedPlace(data.coordinates, data.address);
+  new LoadedPlace(coords, address);
+
 })
-.catch(err => {
-  alert(err.message);
-});
 
