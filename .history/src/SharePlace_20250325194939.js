@@ -59,7 +59,7 @@ class PlaceFinder {
       const sharedLinkInputElement = document.getElementById("share-link");
       sharedLinkInputElement.value = `${
         location.origin
-      }/my-place?location=${locationId}`;
+      }/my-place?location=;
     });
   }
 

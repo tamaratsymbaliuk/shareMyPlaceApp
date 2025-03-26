@@ -54,12 +54,7 @@ class PlaceFinder {
       return response.json();
     })
     .then(data => {
-      const locationId = data.locId;
-      this.shareBtn.disabled = false;
-      const sharedLinkInputElement = document.getElementById("share-link");
-      sharedLinkInputElement.value = `${
-        location.origin
-      }/my-place?location=${locationId}`;
+      console.log(data);
     });
   }
 

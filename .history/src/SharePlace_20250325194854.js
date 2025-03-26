@@ -54,12 +54,14 @@ class PlaceFinder {
       return response.json();
     })
     .then(data => {
-      const locationId = data.locId;
+      const locationId = data.lo
       this.shareBtn.disabled = false;
       const sharedLinkInputElement = document.getElementById("share-link");
       sharedLinkInputElement.value = `${
         location.origin
-      }/my-place?location=${locationId}`;
+      }/my-place?address=${encodeURI(address)}&lat=${coordinates.lat}&lng=${
+        coordinates.lng
+      }`;
     });
   }
 
